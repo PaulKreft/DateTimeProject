@@ -1,5 +1,6 @@
 package de.neuefische.paulkreft;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -19,5 +20,9 @@ public class Main {
         System.out.println("Is After: " + time.isAfter(futureDateTime));
 
         System.out.println("Difference: " + ChronoUnit.DAYS.between(time, inTwoWeeks));
+
+        Animal animalWeDontCareAbout = new Animal("Frank", LocalDate.of(2020, 4, 15));
+
+        System.out.println("Difference: " + ChronoUnit.DAYS.between(LocalDate.now(), animalWeDontCareAbout.getNextBirthday()));
     }
 }
